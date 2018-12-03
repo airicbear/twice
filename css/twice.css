@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 240, 242);
+  margin: 20vh 0 12.5vh 0;
+  text-align: center;
+}
+
+#DROPZONE * {
+  margin-top: 30vh;
+  width: 75vw;
+  height: 75vh;
+}
+
+#TWICE {
+  animation: TWICE 1s;
+  width: 50vw;
+  height: 50vh;
+  transition: all 0.25s ease;
+}
+
+#TWICE:hover {
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 0 #a754a2);
+}
+
+#TWICE:active {
+  animation: CLICK 1s;
+}
+
+@keyframes TWICE {
+  0% {
+    width: 25vw;
+  } 50% {
+    width: 50vw;
+  } 75% {
+    width: 75vw;
+  } 100% {
+    width: 50vw;
+  }
+}
+
+@keyframes CLICK {
+  from {} to {
+    width: 49vw;
+  }
+}
