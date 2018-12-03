@@ -1,3 +1,3 @@
 # TWICE
 
-Twice
+Play a random TWICE MV.
