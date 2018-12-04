@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   color: #ff5fa2;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker', sans-serif;
   transition: all 0.1s ease;
 }
 
@@ -29,13 +29,13 @@ section {
   padding: 15vh 0;
 }
 
-#All {
+#Twice {
   display: block;
   padding: 4vh 0;
   text-align: center;
 }
 
-#All img {
+#Twice img {
   width: 50vw;
 }
 
@@ -64,30 +64,30 @@ a:hover {
   width: 100%;
 }
 
-#DROPZONE {
+#MV {
   /* display: none; */
   text-align: center;
 }
 
-#DROPZONE * {
+#MV * {
   margin-top: 30vh;
   width: 75vw;
   height: 75vh;
 }
 
-#TWICE {
+#TwiceLogo {
   animation: TWICE 1s;
   width: 50vw;
   height: 50vh;
   transition: all 0.25s ease;
 }
 
-#TWICE:hover {
+#TwiceLogo:hover {
   cursor: pointer;
   filter: drop-shadow(5px 5px 0 #a754a2);
 }
 
-#TWICE:active {
+#TwiceLogo:active {
   animation: CLICK 1s;
 }
 
@@ -128,17 +128,17 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  #All {
+  #Twice {
     padding: 10vh 0;
   }
 
-  #All img {
+  #Twice img {
     width: 75vw;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  #DROPZONE {
+  #MV {
     display: none;
   }
 
