@@ -1,8 +1,5 @@
 * {
   box-sizing: border-box;
-  color: #ff5fa2;
-  font-family: 'Permanent Marker', sans-serif;
-  transition: all 0.1s ease;
 }
 
 body {
@@ -15,7 +12,8 @@ body {
   overflow-x: hidden;
 }
 
-header {
+header,
+#MV {
   text-align: center;
 }
 
@@ -44,6 +42,13 @@ a {
   text-decoration: none;
 }
 
+p,
+a {
+  color: #ff5fa2;
+  font-family: 'Permanent Marker', sans-serif;
+  transition: all 0.1s ease;
+}
+
 .value:hover,
 .property:hover+.value,
 a:hover {
@@ -62,11 +67,6 @@ a:hover {
 .picture-side img {
   margin: 2vmin 0;
   width: 100%;
-}
-
-#MV {
-  /* display: none; */
-  text-align: center;
 }
 
 #MV * {
