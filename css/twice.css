@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  color: #ff5fa2;
+  font-family: 'Permanent Marker', cursive;
+  transition: all 0.1s ease;
 }
 
 body {
@@ -8,7 +11,7 @@ body {
 
 #Home {
   background-color: rgb(255, 240, 242);
-  padding: 20vh 0 12.5vh 0;
+  padding: 20vh 0 0 0;
   overflow-x: hidden;
 }
 
@@ -21,9 +24,7 @@ main {
 }
 
 section {
-  color: #ff5fa2;
   display: inline-flex;
-  font-family: 'Permanent Marker', cursive;
   height: 100vh;
   padding: 15vh 0;
 }
@@ -38,21 +39,14 @@ section {
   width: 50vw;
 }
 
-h2 a,
-#All a {
+a {
   color: inherit;
   text-decoration: none;
 }
 
-h2,
-p span {
-  transition: all 0.1s ease;
-}
-
-h2 > *:hover,
 .value:hover,
 .property:hover+.value,
-#All a:hover {
+a:hover {
   text-shadow: 1px 1px 0 #a754a2;
 }
 
@@ -97,6 +91,16 @@ h2 > *:hover,
   animation: CLICK 1s;
 }
 
+footer {
+  font-size: 32px;
+  padding: 5vmin;
+  text-align: right;
+}
+
+.logo {
+  width: 32px;
+}
+
 @keyframes TWICE {
   0% {
     width: 25vw;
@@ -123,7 +127,11 @@ h2 > *:hover,
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+  #All {
+    padding: 10vh 0;
+  }
+
   #All img {
     width: 75vw;
   }
