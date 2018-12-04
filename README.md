@@ -1,8 +1,6 @@
 # TWICE
 
-<div style="text-align: center">
-  <img src="./img/TwiceLogo.svg" alt="TwiceLogo">
-</div>
+<img src="./img/TwiceLogo.svg" alt="TwiceLogo">
 
 ## Description
 
