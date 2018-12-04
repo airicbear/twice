@@ -144,6 +144,10 @@ footer {
   #Twice img {
     width: 75vw;
   }
+
+  .picture-side img {
+    margin: 10vh 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
