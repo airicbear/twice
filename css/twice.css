@@ -2,9 +2,72 @@
   box-sizing: border-box;
 }
 
-body {
+#Home {
   background-color: rgb(255, 240, 242);
-  margin: 20vh 0 12.5vh 0;
+  padding: 20vh 0 12.5vh 0;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin-top: 30vh;
+}
+
+section {
+  color: #ff5fa2;
+  display: inline-flex;
+  font-family: 'Permanent Marker', cursive;
+  height: 100vh;
+  padding: 15vh 0;
+}
+
+#All {
+  display: block;
+  padding: 4vh 0;
+  text-align: center;
+}
+
+#All img {
+  width: 50vw;
+}
+
+h2 a,
+#All a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2,
+p span {
+  transition: all 0.1s ease;
+}
+
+h2 > *:hover,
+.value:hover,
+.property:hover+.value,
+#All a:hover {
+  text-shadow: 1px 1px 0 #a754a2;
+}
+
+.picture-side,
+.info-side {
+  width: 50vw;
+}
+
+.info-side {
+  padding: 5vmin;
+}
+
+.picture-side img {
+  margin: 2vmin 0;
+  width: 100%;
+}
+
+#DROPZONE {
+  /* display: none; */
   text-align: center;
 }
 
@@ -33,17 +96,48 @@ body {
 @keyframes TWICE {
   0% {
     width: 25vw;
-  } 50% {
+  }
+
+  50% {
     width: 50vw;
-  } 75% {
+  }
+
+  75% {
     width: 75vw;
-  } 100% {
+  }
+
+  100% {
     width: 50vw;
   }
 }
 
 @keyframes CLICK {
-  from {} to {
+  from {}
+
+  to {
     width: 49vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #All img {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  section {
+    display: block;
+    width: 100vw;
+  }
+
+  .picture-side,
+  .info-side {
+    background-color: #fcc89b;
+    width: 100vw;
+  }
+  
+  .picture-side img {
+    margin: 0;
   }
 }

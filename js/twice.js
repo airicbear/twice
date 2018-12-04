@@ -19,11 +19,16 @@ const twiceVideos = [
   // 'r1CMjQ0QJ1E', // BRAND NEW GIRL
 ]
 
-function TWICE(target_id, video_id_list = twiceVideos) {
+/**
+ * Add random TWICE MV to target given its id
+ * @param {string} target_id 
+ * @param {string[]} video_id_list 
+ */
+function randomVideo(target_id, video_id_list = twiceVideos) {
   let target = document.getElementById(target_id);
   let random_index = Math.floor(Math.random() * video_id_list.length);
   let video_id = video_id_list[random_index];
-  let random_src = "https://www.youtube.com/embed/" + video_id + "?autoplay=1";
+  let random_src = "https://www.youtube.com/embed/" + video_id; // + "?autoplay=1";
   if (target.hasChildNodes()) {
     target.firstChild.src = random_src;
     return;
@@ -31,6 +36,7 @@ function TWICE(target_id, video_id_list = twiceVideos) {
   let vid = document.createElement("iframe");
   vid.width = 750;
   vid.height = 420;
+  vid.id = "MV";
   vid.src = random_src;
   vid.frameborder = "0";
   vid.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
