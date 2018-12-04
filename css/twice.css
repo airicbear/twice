@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 #Home {
   background-color: rgb(255, 240, 242);
   padding: 20vh 0 12.5vh 0;
