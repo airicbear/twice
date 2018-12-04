@@ -32,7 +32,7 @@
       <article>
         <section id="Twice" tabindex="0">
           <h2><a href="#Home" onclick="focusDelay('Home')">TWICE</a></h2>
-          <img src="./img/Twice.jpg" alt="Group picture of Twice in &quot;Yes or Yes&quot; era">
+          <img class="lazyload" data-src="./img/webp/Twice.webp" onerror="this.onerror=null; this.src='./img/jpg/Twice.jpg'" alt="Group picture of Twice in &quot;Yes or Yes&quot; era">
           <p class="ignore">
             <a href="#Momo" onclick="focusDelay('Momo')">Momo</a>,
             <a href="#Dahyun" onclick="focusDelay('Dahyun')">Dahyun</a>,
@@ -47,7 +47,7 @@
         </section>
         <section id="Momo" tabindex="0">
           <div class="picture-side">
-            <img src="./img/Momo.jpg" alt="Picture of Momo in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Momo.webp" onerror="this.onerror=null; this.src='./img/jpg/Momo.jpg'" alt="Picture of Momo in &quot;Yes or Yes&quot; era">
           </div>
           <div class="info-side">
             <h2><a href="#Twice" onclick="focusDelay('Twice')">Momo (모모)</a></h2>
@@ -90,12 +90,12 @@
             </p>
           </div>
           <div class="picture-side">
-            <img src="./img/Dahyun.jpg" alt="Picture of Dahyun in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Dahyun.webp" onerror="this.onerror=null; this.src='./img/jpg/Dahyun.jpg'" alt="Picture of Dahyun in &quot;Yes or Yes&quot; era">
           </div>
         </section>
         <section id="Nayeon" tabindex="0">
           <div class="picture-side">
-            <img src="./img/Nayeon.jpg" alt="Picture of Nayeon in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Nayeon.webp" onerror="this.onerror=null; this.src='./img/jpg/Nayeon.jpg'" alt="Picture of Nayeon in &quot;Yes or Yes&quot; era">
           </div>
           <div class="info-side">
             <h2><a href="#Twice" onclick="focusDelay('Twice')">Nayeon (나연)</a></h2>
@@ -142,12 +142,12 @@
             </p>
           </div>
           <div class="picture-side">
-            <img src="./img/Mina.jpg" alt="Picture of Mina in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Mina.webp" onerror="this.onerror=null; this.src='./img/jpg/Mina.jpg'" alt="Picture of Mina in &quot;Yes or Yes&quot; era">
           </div>
         </section>
         <section id="Chaeyoung" tabindex="0">
           <div class="picture-side">
-            <img src="./img/Chaeyoung.jpg" alt="Picture of Chaeyoung in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Chaeyoung.webp" onerror="this.onerror=null; this.src='./img/jpg/Chaeyoung.jpg'" alt="Picture of Chaeyoung in &quot;Yes or Yes&quot; era">
           </div>
           <div class="info-side">
             <h2><a href="#Twice" onclick="focusDelay('Twice')">Chaeyoung (채영)</a></h2>
@@ -190,12 +190,12 @@
             </p>
           </div>
           <div class="picture-side">
-            <img src="./img/Sana.jpg" alt="Picture of Sana in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Sana.webp" onerror="this.onerror=null; this.src='./img/jpg/Sana.jpg'" alt="Picture of Sana in &quot;Yes or Yes&quot; era">
           </div>
         </section>
         <section id="Jihyo" tabindex="0">
           <div class="picture-side">
-            <img src="./img/Jihyo.jpg" alt="Picture of Jihyo in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Jihyo.webp" onerror="this.onerror=null; this.src='./img/jpg/Jihyo.jpg'" alt="Picture of Jihyo in &quot;Yes or Yes&quot; era">
           </div>
           <div class="info-side">
             <h2><a href="#Twice" onclick="focusDelay('Twice')">Jihyo (지효)</a></h2>
@@ -246,12 +246,12 @@
             </p>
           </div>
           <div class="picture-side">
-            <img src="./img/Jeongyeon.jpg" alt="Picture of Jeongyeon in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Jeongyeon.webp" onerror="this.onerror=null; this.src='./img/jpg/Jeongyeon.jpg'" alt="Picture of Jeongyeon in &quot;Yes or Yes&quot; era">
           </div>
         </section>
         <section id="Tzuyu" tabindex="0">
           <div class="picture-side">
-            <img src="./img/Tzuyu.jpg" alt="Picture of Tzuyu in &quot;Yes or Yes&quot; era">
+            <img class="lazyload" data-src="./img/webp/Tzuyu.webp" onerror="this.onerror=null; this.src='./img/jpg/Tzuyu.jpg'" alt="Picture of Tzuyu in &quot;Yes or Yes&quot; era">
           </div>
           <div class="info-side">
             <h2><a href="#Twice" onclick="focusDelay('Twice')">Tzuyu (쯔위)</a></h2>
@@ -276,12 +276,12 @@
       </article>
     </main>
     <footer>
-      <a href="https://github.com/airicbear/twice">Contribute <img src="https://image.flaticon.com/icons/svg/25/25471.svg" alt="GitHub" class="logo"></a>
+      <a href="https://github.com/airicbear/twice">Contribute <img class="lazyload" data-src="https://image.flaticon.com/icons/svg/25/25471.svg" alt="GitHub" class="logo"></a>
     </footer>
   </div>
-  <script src="./js/twice.js"></script>
-
-  <script>
+  <script src="./js/lazysizes.min.js" async></script>
+  <script src="./js/twice.js" async defer></script>
+  <script defer>
     randomVideo('MV');
 
     // Smooth anchor jump
