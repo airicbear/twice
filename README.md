@@ -13,3 +13,7 @@ Make a something related to TWICE.
 ## Motivation
 
 TWICE is awesome.
+
+## Credits
+
+Thanks to [web.dev](https://web.dev) for helping me optimize this website.
