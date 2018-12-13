@@ -251,10 +251,7 @@ footer {
 
   .picture-side img,
   .left img,
-  #Twice img,
-  .picture-side img:hover,
-  .left img:hover,
-  #Twice img:hover {
+  #Twice img {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
   }
 }
