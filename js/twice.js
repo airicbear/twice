@@ -128,7 +128,7 @@ let setFocusDelay = (id, delay = 1000) => {
   }, delay);
 };
 
-let getFocusDelay = (index) => 800 + (index * 130);
+let getFocusDelay = (index) => 800 + (index * 110);
 
 /* ~~~~~~~~ Spaghetti code ~~~~~~~~ */
 
