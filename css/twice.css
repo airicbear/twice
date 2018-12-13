@@ -198,19 +198,8 @@ footer {
   }
   
   .picture-side img {
-    box-shadow: -10px 10px 0 rgba(0, 0, 0, 0.5);
     width: 50vw;
     height: auto;
-  }
-
-  .picture-side img,
-  .left > .info-side,
-  .left img,
-  #Twice img,
-  .picture-side img:hover,
-  .left img:hover,
-  #Twice img:hover {
-    box-shadow: none;
   }
   
   .left > .info-side,
@@ -218,9 +207,6 @@ footer {
   .picture-side img {
     margin: 0;
   }
-}
-
-@media only screen and (max-width: 600px) {
 }
 
 @media only screen and (max-width: 480px) {
@@ -249,5 +235,19 @@ footer {
   .picture-side {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  .info-side,
+  .left > .info-side {
+    box-shadow: none
+  }
+
+  .picture-side img,
+  .left img,
+  #Twice img,
+  .picture-side img:hover,
+  .left img:hover,
+  #Twice img:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
   }
 }
