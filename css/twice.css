@@ -59,22 +59,20 @@ a {
 }
 
 .value:hover,
-.property:hover+.value,
+.property:hover + .value,
 a:hover {
-  text-shadow: 1px 1px 0 #b17e06;
+  text-shadow: 0 0 5px #b17e06;
 }
 
 a:focus {
   outline: none;
-  text-shadow: 1px 1px 0 #ffcd59;
-  text-decoration: underline;
+  text-shadow: 0 0 5px #ffcd59;
 }
 
 .info-side {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5vmin;
-  margin-right: 15vmin;
-  margin-top: 10vh;
+  margin: auto 15vmin auto 0;
   height: 0%;
   width: 50vw;
 }
@@ -103,8 +101,7 @@ a:focus {
 .picture-side img:hover,
 .left img:hover,
 #Twice img:hover {
-  box-shadow: 0 0 10px #b17e06;
-  filter: sepia(100%);
+  box-shadow: 0 0 25px #b17e06;
 }
 
 .left > .info-side,
@@ -120,6 +117,11 @@ a:focus {
 .left img {
   margin-left: 0;
   margin-right: 5vmin;
+}
+
+#Twice img,
+.picture-side img {
+  border: ridge 10px #e1cc97;
 }
 
 .wide {
@@ -203,9 +205,8 @@ footer {
   }
   
   .left > .info-side,
-  .info-side,
   .picture-side img {
-    margin: 0;
+    margin: auto 0;
   }
 }
 
