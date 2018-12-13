@@ -163,6 +163,7 @@ function Title(title = "TWICE", href = "Home", focus = "Home", focusDelay = 1000
 function Picture(fileName = "Twice") {
   let img = document.createElement("img");
   img.setAttribute("data-src", "./img/webp/" + fileName + ".webp");
+  img.setAttribute("alt", fileName);
 
   // Use .jpg or .png if browser doesn't support .webp images
   img.onerror = () => {
