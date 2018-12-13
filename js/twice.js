@@ -128,6 +128,8 @@ let setFocusDelay = (id, delay = 1000) => {
   }, delay);
 };
 
+let getFocusDelay = (index) => 800 + (index * 110);
+
 /* ~~~~~~~~ Spaghetti code ~~~~~~~~ */
 
 function Section(id = "Twice", tabIndex = -1) {
@@ -238,7 +240,7 @@ function TwicePictureList(members = TwiceMembers) {
   let p = document.createElement("p");
   p.className = "ignore";
   for (let i = 0; i < members.length; i++) {
-    let memberLink = Link(members[i], members[i] + "Title", 800 + (i * 100), members[i] + "Link");
+    let memberLink = Link(members[i], members[i] + "Title", getFocusDelay(i), members[i] + "Link");
     memberLink.innerHTML = members[i];
     p.appendChild(memberLink);
     if (i < members.length - 1) {
@@ -285,7 +287,7 @@ function Profiles(members = TwiceMembers) {
   profiles.appendChild(TwicePicture());
   for (let i = 0; i < members.length; i++) {
     let swapSides = i % 2 === 1; // Swap sides for every odd member
-    let profile = Profile(members[i], swapSides, 800 + (i * 100));
+    let profile = Profile(members[i], swapSides, getFocusDelay(i));
     profiles.appendChild(profile);
   }
   return profiles;
