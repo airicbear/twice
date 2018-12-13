@@ -1,13 +1,13 @@
 const TwiceMembers = [
-  "Momo",
-  "Dahyun",
-  "Nayeon",
-  "Mina",
-  "Chaeyoung",
-  "Sana",
   "Jihyo",
+  "Mina",
+  "Tzuyu",
+  "Nayeon",
+  "Sana",
+  "Dahyun",
+  "Momo",
+  "Chaeyoung",
   "Jeongyeon",
-  "Tzuyu"
 ]
 
 const TwiceMemberInfo = {
