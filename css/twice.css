@@ -81,9 +81,17 @@ a:focus {
 
 .picture-side img {
   margin-left: 15vw;
-  box-shadow: -10px 10px 0 rgba(0, 0, 0, 0.5);
   width: 25vw;
   height: auto;
+}
+
+.info-side,
+.picture-side img {
+  box-shadow: -10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.picture-side {
+  z-index: 1;
 }
 
 .picture-side img,
@@ -99,14 +107,17 @@ a:focus {
   filter: sepia(100%);
 }
 
+.left > .info-side,
+.left img {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
 .left > .info-side {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.25);
   margin-left: 15vmin;
   margin-right: 0;
 }
 
 .left img {
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
   margin-left: 0;
   margin-right: 5vmin;
 }
