@@ -220,10 +220,10 @@ footer {
     display: block;
     width: 100vw;
   }
-
+  
   .picture-side img {
-    height: auto;
-    width: 50vw;
+    height: 50vh;
+    width: auto;
   }
 
   .picture-side,
