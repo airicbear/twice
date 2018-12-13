@@ -218,7 +218,13 @@ footer {
 
   section {
     display: block;
+    padding: 0;
+    margin: 15vh 0;
     width: 100vw;
+  }
+
+  .info-side {
+    min-height: 50vh;
   }
   
   .picture-side img {
