@@ -14,6 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="./img/TwiceLogo.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/twice.css">
+  <link rel="stylesheet" href="./css/snow.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
     <header>
-      <a href="#Twice" onclick="focusDelay('Twice')">
+      <a href="#Twice" onclick="setFocusDelay('Twice')">
         <img id="TwiceLogo" src="./img/TwiceLogo.svg" alt="Picture of TwiceLogo in &quot;Yes or Yes&quot; era" onclick="// randomVideo('MV')">
       </a>
     </header>
@@ -33,8 +34,12 @@
     </footer>
   </div>
   <script src="./js/lazysizes.min.js" async></script>
+  <script src="./js/keyhandler.js"></script>
+  <script src="./js/snow.js"></script>
   <script src="./js/twice.js"></script>
   <script>
+    winterTheme.main();
+
     document.querySelector("main").appendChild(Profiles());
     
     // Smooth anchor jump

@@ -88,8 +88,15 @@ a:focus {
   box-shadow: -10px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
+img,
+a,
+.info-side {
+  position: relative;
+  z-index: 1; 
+}
+
 .picture-side {
-  z-index: 1;
+  z-index: 2;
 }
 
 .picture-side img,
@@ -132,7 +139,7 @@ a:focus {
   animation: TWICE 1s;
   width: 50vw;
   height: 50vh;
-  transition: all 0.25s ease;
+  transition: all .025s ease;
 }
 
 #TwiceLogo:hover {
