@@ -139,12 +139,12 @@ a,
   animation: TWICE 1s;
   width: 50vw;
   height: 50vh;
-  transition: all .025s ease;
+  transition: all .25s ease;
 }
 
 #TwiceLogo:hover {
   cursor: pointer;
-  filter: drop-shadow(5px 5px 0 #b17e06);
+  filter: drop-shadow(0 0 10px #b17e06);
 }
 
 #TwiceLogo:active {
