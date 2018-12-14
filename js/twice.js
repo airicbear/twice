@@ -130,8 +130,6 @@ let setFocusDelay = (id, delay = 1000) => {
 
 let getFocusDelay = (index) => 800 + (index * 110);
 
-/* ~~~~~~~~ Spaghetti code ~~~~~~~~ */
-
 function Section(id = "Twice", tabIndex = -1) {
   let section = document.createElement("section");
   section.id = id;
@@ -202,11 +200,6 @@ function Span(className = "", text = "") {
   return span;
 }
 
-/**
- * 
- * @param {string} memberName 
- * @param {object} infoList 
- */
 function Info(memberName = "Nayeon", infoList = TwiceMemberInfo) {
   let memberInfo = infoList[memberName]
   let div = Div("info");
@@ -214,7 +207,7 @@ function Info(memberName = "Nayeon", infoList = TwiceMemberInfo) {
     let p = document.createElement("p");
     let property = Span("property");
 
-    // Formatting profile information--thanks, Stack OverFlow
+    // Formatting profile information--thanks, Stack Overflow
     property.innerHTML = info.replace(/([A-Z]+)/g, " $1").replace(/([A-Z][a-z])/g, " $1").replace(/\w\S*/g, function (txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     }) + ": ";
@@ -236,32 +229,6 @@ function InfoSide(memberName = "Nayeon", focusDelay = 1000) {
   return infoSide;
 }
 
-function TwicePictureList(members = TwiceMembers) {
-  let p = document.createElement("p");
-  p.className = "ignore";
-  for (let i = 0; i < members.length; i++) {
-    let memberLink = Link(members[i], members[i] + "Title", getFocusDelay(i), members[i] + "Link");
-    memberLink.innerHTML = members[i];
-    p.appendChild(memberLink);
-    if (i < members.length - 1) {
-      p.appendChild(document.createTextNode(", "));
-    }
-  }
-  return p;
-}
-
-function TwicePicture() {
-  let section, title, img, list;
-  section = Section(title = "Twice", tabIndex = 0);
-  title = Title();
-  img = Picture();
-  list = TwicePictureList();
-  section.appendChild(title);
-  section.appendChild(img);
-  section.appendChild(list);
-  return section;
-}
-
 function Profile(memberName = "Nayeon", swapSides = true, focusDelay = 1000) {
   let section = Section(memberName);
   section.id = memberName;
@@ -278,17 +245,53 @@ function Profile(memberName = "Nayeon", swapSides = true, focusDelay = 1000) {
   return section;
 }
 
-/**
- * Add this to the website.
- * @param {string[]} members 
- */
-function Profiles(members = TwiceMembers) {
+function Profiles(members = TwiceMembers, swapSides = (i) => i % 2 === 1 /* Swap sides every odd number */) {
   let profiles = document.createElement("article");
-  profiles.appendChild(TwicePicture());
   for (let i = 0; i < members.length; i++) {
-    let swapSides = i % 2 === 1; // Swap sides for every odd member
-    let profile = Profile(members[i], swapSides, getFocusDelay(i));
+    let profile = Profile(members[i], swapSides(i), getFocusDelay(i));
     profiles.appendChild(profile);
   }
+  return profiles;
+}
+
+/**
+ * Create an navigation index for the group picture caption
+ * @param {string[]} members 
+ */
+function TwicePictureList(members = TwiceMembers) {
+  let p = document.createElement("p");
+  p.className = "ignore";
+  for (let i = 0; i < members.length; i++) {
+    let memberLink = Link(members[i], members[i] + "Title", getFocusDelay(i), members[i] + "Link");
+    memberLink.innerHTML = members[i];
+    p.appendChild(memberLink);
+    if (i < members.length - 1) {
+      p.appendChild(document.createTextNode(", "));
+    }
+  }
+  return p;
+}
+
+/**
+ * Create a section containing the title, group picture, and navigation index caption
+ */
+function TwicePicture() {
+  let section, title, img, list;
+  section = Section(title = "Twice", tabIndex = 0);
+  title = Title();
+  img = Picture();
+  list = TwicePictureList();
+  section.appendChild(title);
+  section.appendChild(img);
+  section.appendChild(list);
+  return section;
+}
+
+/**
+ * Create an article with the group picture at the top and the individual profiles below it
+ */
+function TwiceProfiles() {
+  let profiles = Profiles();
+  profiles.insertBefore(TwicePicture(), profiles.firstChild);
   return profiles;
 }
