@@ -32,7 +32,8 @@ main {
 
 section {
   display: inline-flex;
-  padding: 15vh 0;
+  padding: 12vh 0;
+  width: 100vw;
 }
 
 #Twice {
@@ -85,7 +86,7 @@ a:focus {
 
 .info-side,
 .picture-side img {
-  box-shadow: -10px 10px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 img,
@@ -113,7 +114,7 @@ a,
 
 .left > .info-side,
 .left img {
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .left > .info-side {
@@ -129,10 +130,6 @@ a,
 #Twice img,
 .picture-side img {
   border: ridge 10px #e1cc97;
-}
-
-.wide {
-  margin: -5vmin 15vmin;
 }
 
 #TwiceLogo {
@@ -211,6 +208,7 @@ footer {
     height: auto;
   }
   
+  .info-side,
   .left > .info-side,
   .picture-side img {
     margin: auto 0;
