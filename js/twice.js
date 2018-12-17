@@ -83,6 +83,14 @@ let setFocusDelay = (id, delay = 1000) => {
 
 let getFocusDelay = (index) => 800 + (index * 110);
 
+// https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
+function calculateAge(birthday) {
+  let birthDate = new Date(birthday);
+  let ageDifMs = Date.now() - birthDate.getTime();
+  let ageDate = new Date(ageDifMs); // miliseconds from epoch
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
 function Section(id = "Twice", tabIndex = -1) {
   let section = document.createElement("section");
   section.id = id;
@@ -155,7 +163,8 @@ function Span(className = "", text = "") {
 }
 
 function Info(memberName = "Nayeon", infoList = TwiceMemberInfo) {
-  let memberInfo = infoList[memberName]
+  let memberInfo = infoList[memberName];
+  memberInfo["age"] = calculateAge(memberInfo["dateOfBirth"]);
   let div = Div("info");
   for (let info in memberInfo) {
     let p = document.createElement("p");
