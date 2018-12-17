@@ -164,6 +164,7 @@ function Picture(fileName = "Twice") {
   let img = document.createElement("img");
   img.setAttribute("data-src", "./img/webp/" + fileName + ".webp");
   img.setAttribute("alt", fileName);
+  img.tabIndex = 0;
 
   // Use .jpg or .png if browser doesn't support .webp images
   img.onerror = () => {
@@ -213,6 +214,7 @@ function Info(memberName = "Nayeon", infoList = TwiceMemberInfo) {
     }) + ": ";
 
     let value = Span("value", memberInfo[info]);
+    value.tabIndex = 0;
     p.appendChild(property);
     p.appendChild(value);
     div.appendChild(p);

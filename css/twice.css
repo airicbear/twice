@@ -42,6 +42,10 @@ section {
   text-align: center;
 }
 
+#Twice:focus {
+  outline: none;
+}
+
 #Twice img {
   width: 50vw;
   box-shadow: 0 10px 10px #352023;
@@ -65,6 +69,8 @@ a:hover {
   text-shadow: 0 0 5px #b17e06;
 }
 
+.value:focus,
+.property:focus + .value,
 a:focus {
   outline: none;
   text-shadow: 0 0 5px #ffcd59;
@@ -108,7 +114,10 @@ a,
 
 .picture-side img:hover,
 .left img:hover,
-#Twice img:hover {
+#Twice img:hover,
+.picture-side img:focus,
+.left img:focus,
+#Twice img:focus {
   box-shadow: 0 0 25px #b17e06;
 }
 
@@ -133,19 +142,16 @@ a,
 }
 
 #TwiceLogo {
-  animation: TWICE 1s;
+  filter: drop-shadow(0 0 10px #b17e06);
   width: 50vw;
   height: 50vh;
   transition: all .25s ease;
 }
 
-#TwiceLogo:hover {
+#TwiceLogo:hover,
+#TwiceLogo:focus {
   cursor: pointer;
-  filter: drop-shadow(0 0 10px #b17e06);
-}
-
-#TwiceLogo:active {
-  animation: CLICK 1s;
+  filter: drop-shadow(0 0 2px #b17e06);
 }
 
 footer {
@@ -154,39 +160,14 @@ footer {
   text-align: right;
 }
 
-.logo {
+.logo img {
   width: 32px;
   transition: all 0.25s ease;
 }
 
-.logo:hover {
+.logo:hover,
+.logo:focus {
   filter: sepia(200%) brightness(300%);
-}
-
-@keyframes TWICE {
-  0% {
-    width: 25vw;
-  }
-
-  50% {
-    width: 50vw;
-  }
-
-  75% {
-    width: 75vw;
-  }
-
-  100% {
-    width: 50vw;
-  }
-}
-
-@keyframes CLICK {
-  from {}
-
-  to {
-    width: 49vw;
-  }
 }
 
 @media only screen and (max-width: 800px) {
