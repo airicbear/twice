@@ -1,33 +1,5 @@
-<!--                                         
-                                   `..     
-                              `.......     
-                 `...................      
-           `........................`      
-        `..........................        
-      .........................`           
-    ...         .......                    
-  `..          .......`            ``      
- `..`          .......           ...... ...
- ...          .......            ..........
-.....         ......    `....     ......`  
-......       ......    ........    .....   
- .......     ......   ....`....    .....   
-  ...`       .....   `...  ....    ....    
-            `.....    ... ....    .....    
-             .....    .......    .....     
-             ......    ....    `.....      
-              `....................        
-                 `....     .....           
--->
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-<!--<![endif]-->
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,30 +10,31 @@
   <link rel="stylesheet" href="./css/twice.css">
   <link rel="stylesheet" href="./css/snow.css">
 </head>
-
 <body>
   <div id="Home">
-    <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
     <header>
-      <a href="#Twice" onclick="setFocusDelay('Twice')">
-        <img id="TwiceLogo" src="./img/TwiceLogo.svg" alt="Picture of TwiceLogo in &quot;Yes or Yes&quot; era" onclick="// randomVideo('MV')">
+      <a href="#Twice">
+        <img id="TwiceLogo" src="./img/TwiceLogo.svg" alt="Picture of TwiceLogo in &quot;Yes or Yes&quot; era">
       </a>
     </header>
     <main>
+      <!-- Twice Profiles -->
     </main>
     <footer>
-      <a href="https://github.com/airicbear/twice" class="logo"><img class="lazyload" data-src="./img/GitHubLogo.svg" alt="GitHub"></a>
+      <a href="https://www.instagram.com/twicetagram/" class="logo"><img class="lazyload" data-src="./img/media/Instagram.svg" alt="Instagram"></a>
+      <a href="https://twitter.com/JYPETWICE" class="logo"><img class="lazyload" data-src="./img/media/Twitter.svg" alt="Twitter"></a>
+      <a href="https://www.facebook.com/JYPETWICE" class="logo"><img class="lazyload" data-src="./img/media/Facebook.svg" alt="Facebook"></a>
+      <a href="https://www.youtube.com/jypentertainment" class="logo"><img class="lazyload" data-src="./img/media/YouTube.svg" alt="YouTube"></a>
+      <a href="https://github.com/airicbear/twice" class="logo"><img class="lazyload" data-src="./img/media/GitHub.svg" alt="GitHub"></a>
     </footer>
   </div>
   <script src="./js/lazysizes.min.js" async></script>
-  <script src="./js/keyhandler.js"></script>
-  <script src="./js/snow.js"></script>
+  <script src="./js/snow.min.js"></script>
   <script src="./js/twice.js"></script>
-  <script>
+  <script defer>
     winterTheme.main();
 
+    document.getElementById("TwiceLogo").onclick = () => setFocusDelay("Twice");
     document.querySelector("main").appendChild(TwiceProfiles());
     
     // Smooth anchor jump
@@ -75,5 +48,4 @@
     });
   </script>
 </body>
-
 </html>

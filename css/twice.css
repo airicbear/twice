@@ -1,10 +1,7 @@
 /* latin */
 @font-face {
   font-family: 'Coming Soon';
-  font-style: normal;
-  font-weight: 400;
   src: local('Coming Soon Regular'), local('ComingSoon-Regular'), url(https://fonts.gstatic.com/s/comingsoon/v8/qWcuB6mzpYL7AJ2VfdQR1t-VWDk.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 * {
@@ -142,7 +139,7 @@ a,
 }
 
 #TwiceLogo {
-  filter: drop-shadow(0 0 10px #b17e06);
+  filter: drop-shadow(0 0 10px #ebc975);
   width: 50vw;
   height: 50vh;
   transition: all .25s ease;
@@ -151,7 +148,7 @@ a,
 #TwiceLogo:hover,
 #TwiceLogo:focus {
   cursor: pointer;
-  filter: drop-shadow(0 0 2px #b17e06);
+  filter: drop-shadow(0 0 20px #ebc975);
 }
 
 footer {
@@ -161,13 +158,17 @@ footer {
 }
 
 .logo img {
+  border-radius: 7px;
   width: 32px;
-  transition: all 0.25s ease;
+}
+
+.logo {
+  filter: opacity(25%);
 }
 
 .logo:hover,
 .logo:focus {
-  filter: sepia(200%) brightness(300%);
+  filter: invert(100%);
 }
 
 @media only screen and (max-width: 800px) {
