@@ -24,8 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-header,
-#MV {
+header {
   text-align: center;
 }
 
@@ -50,8 +49,8 @@ section {
 }
 
 #Twice img {
-  width: 50vw;
   box-shadow: 0 10px 10px #352023;
+  width: 50vw;
 }
 
 a {
@@ -184,7 +183,7 @@ footer {
   }
 
   #Twice img {
-    width: 75vw;
+    width: 95vw;
   }
   
   .picture-side img {
