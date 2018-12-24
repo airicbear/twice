@@ -1,3 +1,9 @@
+#snowCanvas {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+
 /* latin */
 @font-face {
   font-family: 'Coming Soon';
@@ -94,7 +100,8 @@ a:focus {
 
 img,
 a,
-.info-side {
+.info-side,
+button {
   position: relative;
   z-index: 1; 
 }

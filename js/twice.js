@@ -108,13 +108,8 @@ function Link(href = "", focus = "", focusDelay = 1000, id = "") {
   return a;
 }
 
-function H2() {
-  let h2 = document.createElement("h2");
-  return h2;
-}
-
 function Title(title = "TWICE", href = "Home", focus = "Home", focusDelay = 1000, id = "TwiceTitle") {
-  let h2 = H2(title);
+  let h2 = document.createElement("h2");
   let h2Link = Link(href, focus, focusDelay, id);
   h2Link.innerHTML = title;
   h2.appendChild(h2Link);
@@ -186,10 +181,8 @@ function Info(memberName = "Nayeon", infoList = TwiceMemberInfo) {
 
 function InfoSide(memberName = "Nayeon", focusDelay = 1000) {
   let infoSide = Div("info-side");
-  let title = Title(memberName, "Twice", memberName + "Link", focusDelay, memberName + "Title");
-  let info = Info(memberName);
-  infoSide.appendChild(title);
-  infoSide.appendChild(info);
+  infoSide.appendChild(Title(memberName, "Twice", memberName + "Link", focusDelay, memberName + "Title"));
+  infoSide.appendChild(Info(memberName));
   return infoSide;
 }
 
@@ -240,14 +233,10 @@ function TwicePictureList(members = TwiceMembers) {
  * Create a section containing the title, group picture, and navigation index caption
  */
 function TwicePicture() {
-  let section, title, img, list;
-  section = Section(title = "Twice", tabIndex = 0);
-  title = Title();
-  img = Picture();
-  list = TwicePictureList();
-  section.appendChild(title);
-  section.appendChild(img);
-  section.appendChild(list);
+  let section = Section(title = "Twice", tabIndex = 0);
+  section.appendChild(Title());
+  section.appendChild(Picture());
+  section.appendChild(TwicePictureList());
   return section;
 }
 

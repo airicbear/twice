@@ -86,7 +86,7 @@ function createCanvas(width, height) {
   return newCanvas;
 }
 
-const winterTheme = {
+const snow = {
   /**
    * Create a snowflake with random values, with its position restricted by the given canvas' dimensions.
    * @param {HTMLCanvasElement} canvas 
@@ -136,14 +136,14 @@ const winterTheme = {
     const canvas = createCanvas(window.innerWidth, window.innerHeight);
     canvas.id = "snowCanvas";
 
+    // Create the snowflakes
+    let snowflakes = this.createSnowflakes(canvas, 20);
+    
+    // Update the snowflakes
+    this.update(canvas, snowflakes);
+
     // Add the canvas to the website
     document.body.insertBefore(canvas, document.body.firstChild);
     document.getElementById("Home").appendChild(canvas);
-
-    // Create the snowflakes
-    let snowflakes = this.createSnowflakes(canvas, 20);
-
-    // Update the snowflakes
-    this.update(canvas, snowflakes);
   },
 }
