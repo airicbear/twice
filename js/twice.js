@@ -70,19 +70,6 @@ const TwiceMemberInfo = {
   },
 }
 
-/**
- * Focus image with delay to allow smooth anchor jump
- * @param {string} id
- * @param {number} delay
- **/
-let setFocusDelay = (id, delay = 1000) => {
-  setTimeout(() => {
-    document.getElementById(id).focus();
-  }, delay);
-};
-
-let getFocusDelay = (index) => 800 + (index * 110);
-
 // https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
 function calculateAge(birthday) {
   let birthDate = new Date(birthday);
@@ -100,17 +87,16 @@ function Section(id = "Twice", tabIndex = -1) {
   return section;
 }
 
-function Link(href = "", focus = "", focusDelay = 1000, id = "") {
+function Link(href = "", id = "") {
   let a = document.createElement("a");
   a.href = "#" + href;
-  a.setAttribute("onclick", "setFocusDelay('" + focus + "', " + focusDelay + ")");
   a.id = id;
   return a;
 }
 
-function Title(title = "TWICE", href = "Home", focus = "Home", focusDelay = 1000, id = "TwiceTitle") {
+function Title(title = "TWICE", href = "Home", id = "TwiceTitle") {
   let h2 = document.createElement("h2");
-  let h2Link = Link(href, focus, focusDelay, id);
+  let h2Link = Link(href, id);
   h2Link.innerHTML = title;
   h2.appendChild(h2Link);
   return h2;
@@ -179,19 +165,19 @@ function Info(memberName = "Nayeon", infoList = TwiceMemberInfo) {
   return div;
 }
 
-function InfoSide(memberName = "Nayeon", focusDelay = 1000) {
+function InfoSide(memberName = "Nayeon") {
   let infoSide = Div("info-side");
-  infoSide.appendChild(Title(memberName, "Twice", memberName + "Link", focusDelay, memberName + "Title"));
+  infoSide.appendChild(Title(memberName, "Twice", memberName + "Link", memberName + "Title"));
   infoSide.appendChild(Info(memberName));
   return infoSide;
 }
 
-function Profile(memberName = "Nayeon", swapSides = true, focusDelay = 1000) {
+function Profile(memberName = "Nayeon", swapSides = true) {
   let section = Section(memberName);
   section.id = memberName;
   section.className += swapSides ? " left" : "";
   let pictureSide = PictureSide(memberName);
-  let infoSide = InfoSide(memberName, focusDelay);
+  let infoSide = InfoSide(memberName);
   if (swapSides) {
     section.appendChild(infoSide);
     section.appendChild(pictureSide);
@@ -205,7 +191,7 @@ function Profile(memberName = "Nayeon", swapSides = true, focusDelay = 1000) {
 function Profiles(members = TwiceMembers, swapSides = (i) => i % 2 === 1 /* Swap sides every odd number */) {
   let profiles = document.createElement("article");
   for (let i = 0; i < members.length; i++) {
-    let profile = Profile(members[i], swapSides(i), getFocusDelay(i));
+    let profile = Profile(members[i], swapSides(i));
     profiles.appendChild(profile);
   }
   return profiles;
@@ -219,7 +205,7 @@ function TwicePictureList(members = TwiceMembers) {
   let p = document.createElement("p");
   p.className = "ignore";
   for (let i = 0; i < members.length; i++) {
-    let memberLink = Link(members[i], members[i] + "Title", getFocusDelay(i), members[i] + "Link");
+    let memberLink = Link(members[i], members[i] + "Title", members[i] + "Link");
     memberLink.innerHTML = members[i];
     p.appendChild(memberLink);
     if (i < members.length - 1) {
