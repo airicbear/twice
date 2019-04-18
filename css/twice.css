@@ -145,7 +145,6 @@ button {
 }
 
 #TwiceLogo {
-  filter: drop-shadow(0 0 10px #ebc975);
   width: 50vw;
   height: 50vh;
   transition: all .25s ease;
@@ -154,7 +153,7 @@ button {
 #TwiceLogo:hover,
 #TwiceLogo:focus {
   cursor: pointer;
-  filter: drop-shadow(0 0 20px #ebc975);
+  filter: drop-shadow(0 0 10px #ebc975);
 }
 
 footer {
